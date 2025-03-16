@@ -232,7 +232,7 @@ padding: 40px;
 .container{
   border: 1px solid black;
   width: 100%;
-  height: auto;
+  height: 500px;
   margin-top: 40px;
   background-color: #edebe9;
 }
@@ -258,13 +258,190 @@ padding: 40px;
 }
 
 .bg{
-  border: 1px solid black;
-  width: 90%;
-  height: 300px;
-  margin: auto;
+  display: flex;
+  flex-direction: column;
   background-image: url(https://preprodtsbstorage.blob.core.windows.net/cms/uploads/ICW_Live_Event_Day5_41f11ca3d2.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
-  object-fit: cover;
+  background-position: center;
+  padding: 25px;
+  border-radius: 18px;
+  height: 340px;
   width: 90%;
+  margin: auto;
   
+}
+:hover {
+  .bg{
+  background-color: black;
+  }
+}
+
+.cc button {
+  font-size: 12px;
+  font-family: sans-serif;
+  width: 90px;
+  height: 15px;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: green;
+}
+
+.part{
+  border: 1px solid transparent;
+  margin-top: 130px;
+}
+
+.part p{
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #ffffff;
+}
+.part h5{
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ede7e7;
+  margin-top: 20px;
+}
+.part button{
+  margin-top: 20px;
+  border: 1px solid white ;
+  width: 160px;
+  height: 30px;
+  border-radius: 10px;
+  font-family: sans-serif;
+  font-size: medium;
+}
+
+.footer {
+  background-color: #0e382c;
+  color: white;
+}
+
+.footer-container {
+  width: 83%;
+  margin: 0 auto;
+  padding: 155px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+}
+
+.footer-options {
+  & ul > li {
+    list-style: none;
+    font-weight: 100;
+    font-size: 14px;
+    margin-top: 35px;
+  }
+}
+
+.social-media-options {
+  & .links > i {
+    font-size: 30px;
+    margin-top: 35px;
+    margin-right: 20px;
+  }
+}
+.download-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 150px;
+}
+
+.copyright-section {
+  width: 83%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0 50px 0;
+
+  .cs-left {
+    display: flex;
+
+    & :nth-child(1) {
+      padding-right: 20px;
+    }
+
+    & :nth-child(2) {
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+      padding: 0 20px;
+    }
+
+    & :nth-child(3) {
+      border-right: 1px solid white;
+      padding: 0 20px;
+    }
+
+    & :nth-child(4) {
+      border-left: 1px solid white;
+      padding-left: 20px;
+    }
+  }
+
+  & p {
+    font-size: 14px;
+    font-weight: 100;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .nav-bar,
+  .footer-container,
+  .copyright-section {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .nav-bar,
+  .cart-container,
+  .footer-container,
+  .copyright-section {
+    width: 90%;
+  }
+
+  .nav-bar  {
+
+    flex-direction: column;
+    gap: 10px;
+    height: 250px;
+  }
+  .name{
+    display: flex-column;
+  }
+
+  .left-nav { 
+    flex-direction: column;
+  }
+
+  .right-nav {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .know-more-section {
+    display: none;
+  }
+
+  .beverage-subscription {
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    padding: 80px;
+  }
+
+  .copyright-section {
+    flex-direction: column;
+    gap: 30px;
+  }
 }
